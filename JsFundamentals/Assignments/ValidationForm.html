@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Validation(){
+            var name=document.forms["MyForm"]["name"].value;
+            var age=document.forms["MyForm"]["age"].value;
+            if(name==""){
+                alert("Plz Fill the name");
+                return false;
+            }
+            else if(!isNaN(name)){
+                alert("plz enter your name");
+                return false;
+            }
+            else if(age==""){
+                alert("plz fill the age");
+                return false;
+            }
+            else if(isNaN(age)){
+                alert("plz enter your age");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="MyForm" method="Post" action="./ValidationFormResult.html" onsubmt="return Validation()" >
+        Enter Name <input type="text" name="name"><br><br>
+        Enter Age <input type="text" name="age"><br><br>
+        <input type="submit" Value="SUBMIT">
+
+    </form>
+</body>
+</html>
