@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackGround Color</title>
+    <script>
+        function Validation(){
+            var color=document.forms["MyForm"]["color"].value;
+            document.body.style.backgroundColor=color;
+            return false;
+        }
+    </script>
+</head>
+<body align="center">
+    <h1>BACKGROUND COLOR CHANGER</h1><hr><br><br>
+    <form name="MyForm" onsubmit="return Validation()">
+        Enter Your Color <input type="text" name="color" onfocus="this.value=''" value="Enter Color"><br><br>
+        <input type="submit" Value="SUBMIT" id="button">
+    </form>
+</body>
+</html>
